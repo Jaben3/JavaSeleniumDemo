@@ -1,6 +1,5 @@
 package tests;
 
-import elements.TrialOfStonesElements;
 import org.openqa.selenium.WebElement;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
@@ -23,35 +22,32 @@ public class PageObjectModelTest extends BaseTest{
         assertEquals(page.getPageURL(), expectedURL);
         assertEquals(page.getPageTitle(), expectedTitle);
 
-        // Init TrialOfStones Elements
-        TrialOfStonesElements tose = new TrialOfStonesElements(driver);
-
         // Solve Riddle of Stone and assert answer is displayed
         page.typeInRiddleOfStoneInput("rock");
         page.clickOnRiddleOfStoneButton();
         assertTrue(page.getRiddleOfStoneAnswer().isDisplayed());
 
         // Solve Riddle of Secrets and assert answer is displayed
-        tose.riddleOfSecretsInput.sendKeys(page.getRiddleOfStoneAnswer().getText());
-        tose.riddleOfSecretsButton.click();
-        assertTrue(tose.riddleOfSecretsAnswer.isDisplayed());
+        page.typeInRiddleOfSecretsInput(page.getRiddleOfStoneAnswer().getText());
+        page.clickOnRiddleOfSecretsButton();
+        assertTrue(page.getRiddleOfSecretsAnswer().isDisplayed());
 
         // Solve The Two Merchants and assert answer is displayed
         List<Integer> tmp = new ArrayList<>();
-        for (WebElement item : tose.merchantsWealth){
+        for (WebElement item : page.getMerchantsWealth()){
             tmp.add(Integer.parseInt(item.getText()));
         }
 
         int index = tmp.indexOf(Collections.max(tmp));
-        String richestMerchant = tose.merchantsNames.get(index).getText();
+        String richestMerchant = page.getMerchantsNames().get(index).getText();
 
-        tose.merchantsInput.sendKeys(richestMerchant);
-        tose.merchantsButton.click();
-        assertTrue(tose.merchantsAnswer.isDisplayed());
+        page.typeInMerchantsInput(richestMerchant);
+        page.clickOnMerchantsButton();
+        assertTrue(page.getMerchantsAnswer().isDisplayed());
 
         // Check Answers
-        tose.checkButton.click();
-        assertTrue(tose.finalAnswer.isDisplayed());
-        assertEquals(tose.finalAnswer.getText(), "Trial Complete");
+        page.clickOnCheckAnswersButton();
+        assertTrue(page.getFinalAnswer().isDisplayed());
+        assertEquals(page.getFinalAnswer().getText(), "Trial Complete");
     }
 }

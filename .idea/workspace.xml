@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce6b2231-57c9-4e4e-872d-9d10c9f98458" name="Changes" comment="Solved Riddle of Stones and Riddle of Secrets">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ce6b2231-57c9-4e4e-872d-9d10c9f98458" name="Changes" comment="Completed Trial of Stones test">
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/PageObjectModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PageObjectModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.PageObjectModelTest">
     <configuration name="C:/Users/Kuba/IntelijProjects/JavaSeleniumDemo/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JavaSeleniumDemo" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -54,8 +53,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PageObjectModelTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaSeleniumDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PageObjectModelTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PageObjectModelTest" />
         <item itemvalue="TestNG.C:/Users/Kuba/IntelijProjects/JavaSeleniumDemo/testng.xml" />
       </list>
     </recent_temporary>
@@ -83,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689930281421</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Completed Trial of Stones test">
+      <created>1689931415758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689931415758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Solved Riddle of Stones and Riddle of Secrets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved Riddle of Stones and Riddle of Secrets" />
+    <MESSAGE value="Completed Trial of Stones test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Trial of Stones test" />
   </component>
 </project>

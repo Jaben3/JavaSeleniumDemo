@@ -1,0 +1,7 @@
+<suite name="Demo Suite">
+    <test name="PageObjectModel Test">
+        <classes>
+            <class name="tests.PageObjectModelTest"/>
+        </classes>
+    </test>
+</suite>

@@ -50,4 +50,16 @@ public class PageObjectModelTest extends BaseTest{
         assertTrue(page.getFinalAnswer().isDisplayed());
         assertEquals(page.getFinalAnswer().getText(), "Trial Complete");
     }
+
+    @Test()
+    public void negativePathTest(){
+        // Navigate to Trial of Stones Page
+        TrialOfStonesPage page = new TrialOfStonesPage(driver);
+        page.navigateToPage();
+
+        // Input bad answer in Riddle of Stone and assert answer is NOT displayed
+        page.typeInRiddleOfStoneInput("bad answer");
+        page.clickOnRiddleOfStoneButton();
+        assertFalse(page.getRiddleOfStoneAnswer().isDisplayed());
+    }
 }
